@@ -43,7 +43,7 @@ main {
 h1 {
   font-size: 36px;
   padding: 5px 0;
-  margin: 0;
+  margin: 30px 0 0 0;
 }
 
 h2 {
@@ -132,3 +132,24 @@ button {
   margin: 0 10px 0 10px;
 }
 
+#new-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#add-event-form {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 0 0;
+}
+.form-item {
+  margin: 2px 0 10px 0;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,31 +1,36 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
-
+<div class="center">
+<h1>Add a New Trip!</h1>
+<h3>First, add the main details below...</h3>
+</div>
+<div id="add-event-form">
 <form id="new-form" action="/events" method="POST">
   <label for="name-input">Name of event:</label>
-    <input type="text" name="name" id="name-input">
+    <input type="text" name="name" class="form-item" id="name-input" autocomplete="off">
   
   <label for="date-input">Date range:</label>
-    <input type="text" name="date" id="date-input">
+    <input type="text" name="date" class="form-item" id="date-input"  autocomplete="off">
   
   <label for="evtLink-input">Link to event:</label>
-    <input type="url" name="evtLink" id="evtLink-input"> //watch for errors because type url
+    <input type="url" name="evtLink" class="form-item" id="evtLink-input"  autocomplete="off">
   
   <label for="location-input">Location:</label>
-    <input type="text" name="location" id="location-input">
+    <input type="text" name="location" class="form-item" id="location-input" autocomplete="off">
 
   <label for="time-input">Time:</label>
-    <input type="text" name="time" id="time-input">
+    <input type="text" name="time" class="form-item" id="time-input" autocomplete="off">
   
   <label for="lodging-input">Lodging:</label>
-    <input type="text" name="lodging" id="lodging-input">
+    <input type="text" name="lodging" class="form-item" id="lodging-input" autocomplete="off">
   
   <label for="image-input">Event image (imgur link):</label>
-    <input type="url" name="image" id="image-input">
+    <input type="url" name="image" class="form-item" id="image-input" autocomplete="off">
 
   <a href="/profiles/<%= user.profile._id%>/events"</a>
     <button type="submit" id="my-events-btn">Next</button>
   </a>
 </form>
+</div>
 
 <%- include('../partials/footer') %>

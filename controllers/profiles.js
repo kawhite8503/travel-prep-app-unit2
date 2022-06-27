@@ -2,7 +2,6 @@ import { Profile } from '../models/profile.js'
 import { Event } from '../models/event.js'
 
 function index(req,res) {
-  console.log('PROFILES!!!!!!!!')
   let modelQuery = req.query.name
     ? { name: new RegExp(req.query.name, 'i') }
     : {}

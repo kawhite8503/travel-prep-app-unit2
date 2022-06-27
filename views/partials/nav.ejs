@@ -7,7 +7,7 @@
     <% if (user) { %>
       <ul id="navbar">
       <% if (user?.profile.avatar) { %>
-        <li>
+        <li class="form">
           <img id="google-user-icon-nav"
             src="<%= user.profile.avatar %>"
             alt="<%= user.profile.name %> avatar"
