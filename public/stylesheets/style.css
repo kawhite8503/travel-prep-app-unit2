@@ -76,11 +76,23 @@ section {
 
 }
 
-#google-user-icon {
+#upcoming-trips {
+  margin: 5px 0 0 0;
+}
+
+#google-user-icon-nav {
   max-width: 40px;
+  border-radius: 50px;
 
 }
 
-#upcoming-trips {
-  margin: 5px 0 0 0;
+.google-user-icon{
+  border-radius: 50px;
+
+}
+.card {
+  border: solid 5px #ffb703;
+  border-radius: 25% 10%;
+  margin: 20px;
+  padding: 20px;
 }

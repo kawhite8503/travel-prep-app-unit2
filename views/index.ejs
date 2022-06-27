@@ -7,38 +7,13 @@
     <p>Join our community of planners and spend less time stressing, and more time living your dreams!</p>
     <% } else { %> 
   <div>
-    <h1 id="login-username"><%= user ? user.profile.name + "'s": "Upcoming Trips" %></h1>
+    <h1>Welcome</h1>
+    <h1 id="login-username"><%= user ? user.profile.name + "!": "Please try logging in again!" %></h1>
     <h3 id="upcoming-trips">upcoming trips!</h3>
   </div>
   
 
-  <section>
-
-  <div id="profilesContainer">
-    <% profiles.forEach(profile => { %>
-      <a class="profileCard" href="/profiles/<%= profile._id %> ">
-        <div class="card">
-          <% if (profile.avatar) { %>
-            <img 
-              src="<%= profile.avatar %>" 
-              alt="<%= profile.name %>"
-            >
-          <% } else { %>
-            <img 
-              src="https://picsum.photos/96" 
-              alt="No profile picture available"
-            >
-          <% } %>
-          <div class="card-body">
-            <h1 class="card-title"><%= profile.name %></h1>
-            <h3>Upcoming Trips</h3>
-          </div>
-        </div>
-      </div>
-      <% }) %>
-  </div>
-
-  </section>
+  
 
 
 
