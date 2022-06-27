@@ -2,8 +2,7 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <section>
-
+  <section class="card-containers">
     <div id="profilesContainer">
       <% profiles.forEach(profile => { %>
         <a class="profileCard" href="/profiles/<%= profile._id %> ">
@@ -27,8 +26,7 @@
         </div>
         <% }) %>
     </div>
-  
-    </section>
+  </section>
 </main>
 
 <%- include('../partials/footer') %>

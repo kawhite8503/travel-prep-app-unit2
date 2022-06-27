@@ -39,12 +39,11 @@ main {
   flex-direction: column;
 }
 
-h1 {
-  font-size: 3.6rem;
-}
 
 h1 {
   font-size: 36px;
+  padding: 5px 0;
+  margin: 0;
 }
 
 h2 {
@@ -72,8 +71,7 @@ section {
 }
 
 #login-username {
-  margin: 20px 0 0 0;
-
+padding: 20px 0 0 0;
 }
 
 #upcoming-trips {
@@ -86,6 +84,14 @@ section {
 
 }
 
+#welcome-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20vh 0 0 0;
+}
+
 .google-user-icon{
   border-radius: 50px;
 
@@ -95,4 +101,28 @@ section {
   border-radius: 25% 10%;
   margin: 20px;
   padding: 20px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+
+}
+
+.profileCard {
+  text-decoration: none;
+  color: #023047;
 }

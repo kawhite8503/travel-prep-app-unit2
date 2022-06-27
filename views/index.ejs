@@ -1,25 +1,15 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
 
-<main>
+<main class="main">
   <% if (!user) { %> 
     <p>What is better than taking a fun trip with the ones you love? <br> ...knowing you are organized and can enjoy your time together!</p>
     <p>Join our community of planners and spend less time stressing, and more time living your dreams!</p>
     <% } else { %> 
-  <div>
+  <div id="welcome-message">
     <h1>Welcome</h1>
     <h1 id="login-username"><%= user ? user.profile.name + "!": "Please try logging in again!" %></h1>
-    <h3 id="upcoming-trips">upcoming trips!</h3>
   </div>
-  
-
-  
-
-
-
-
-
-
     <% } %> 
 </main>
 
