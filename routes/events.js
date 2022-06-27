@@ -5,6 +5,10 @@ const router = Router()
 
 router.get('/new', eventsCtrl.new)
 
+router.post('/', eventsCtrl.create)
+
+router.get('/:id/items/new', eventsCtrl.newItem)
+
 export {
   router
 }

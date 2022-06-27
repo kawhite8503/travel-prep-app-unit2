@@ -12,7 +12,7 @@ const itemsSchema = new Schema ({
 
 const eventSchema = new Schema({
   name: String,
-  date: Date,
+  date: String,
   location: String,
   time: String,
   evtLink: String,
