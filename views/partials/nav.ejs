@@ -5,8 +5,23 @@
 <body>
   <nav>
     <% if (user) { %>
+      <% if (user?.profile.avatar) { %>
+        <div>
+          <img id="google-user-icon"
+            src="<%= user.profile.avatar %>"
+            alt="<%= user.profile.name %> avatar"
+          />
+        </div>
+      <% } %>
+      <p id="login-username"><%=user.profile.name%></p>
+      <a href="">
+        <button href="" id="my-events-btn">My Events</button>
+      </a>
+      <a href="/events">
+        <button href="" id="all-profiles-btn">All Profiles</button>
+      </a>
       <a href="/auth/logout">
-        <button type="submit">Logout</button>
+        <button type="submit"  id="logout-btn">Logout</button>
       </a>
     <% } else { %>
       <a href="/auth/google" class="siwg-link">

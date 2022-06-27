@@ -2,15 +2,24 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-      />
-    </div>
-  <% } %>
+  <% if (!user) { %> 
+    <p>What is better than taking a fun trip with the ones you love? <br> ...knowing you are organized and can enjoy your time together!</p>
+    <p>Join our community of planners and spend less time stressing, and more time living your dreams!</p>
+    <% } else { %> 
+  <div>
+    <h1 id="login-username"><%= user ? user.profile.name + "'s": "Upcoming Trips" %></h1>
+    <h3 id="upcoming-trips">upcoming trips!</h3>
+  </div>
+  
+
+
+
+
+
+
+
+
+    <% } %> 
 </main>
 
 <%- include('./partials/footer') %>
