@@ -2,6 +2,14 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+const itemsSchema = new Schema ({
+  name: String,
+  whoFor: String,
+  isPacked: Boolean,
+}, {
+  timestamps: true
+})
+
 const eventSchema = new Schema({
   name: String,
   date: Date,
@@ -15,7 +23,7 @@ const eventSchema = new Schema({
   timestamps: true
 })
 
-const Event = mongoose.model('Event', EventSchema)
+const Event = mongoose.model('Event', eventSchema)
 
 export {
   Event

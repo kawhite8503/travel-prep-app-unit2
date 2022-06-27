@@ -81,6 +81,7 @@ padding: 20px 0 0 0;
 #google-user-icon-nav {
   max-width: 40px;
   border-radius: 50px;
+  margin: 0 10px 0 10px;
 
 }
 
@@ -126,3 +127,8 @@ li {
   text-decoration: none;
   color: #023047;
 }
+
+button {
+  margin: 0 10px 0 10px;
+}
+

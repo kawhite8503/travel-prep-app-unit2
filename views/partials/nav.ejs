@@ -18,7 +18,7 @@
           <p id="nav-login-username"><%=user.profile.name%></p>
         </li>
         <li>
-          <a href="/profiles">
+          <a href="/profiles/<%= user.profile._id%>"</a>
             <button type="submit" id="my-events-btn">My Events</button>
           </a>
         </li>

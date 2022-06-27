@@ -1,4 +1,5 @@
 import { Profile } from '../models/profile.js'
+import { Event } from '../models/event.js'
 
 function index(req,res) {
   console.log('PROFILES!!!!!!!!')
@@ -22,6 +23,23 @@ function index(req,res) {
   })
 }
 
+function show(req,res) {
+  Profile.findById(req.params.id).populate("events")
+  .then(profile => {
+    const isSelf = profile._id.equals(req.user.profile._id)
+    res.render("profiles/show", {
+      title: 'My Events',
+      profile: profile,
+      isSelf
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   index,
+  show,
 }
