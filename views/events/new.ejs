@@ -3,28 +3,29 @@
 
 <form id="new-form" action="/events" method="POST">
   <label for="name-input">Name of event:</label>
-  <input type="text" name="name" id="name-input">
+    <input type="text" name="name" id="name-input">
   
   <label for="date-input">Date range:</label>
-  <input type="text" name="date" id="date-input">
+    <input type="text" name="date" id="date-input">
   
   <label for="evtLink-input">Link to event:</label>
-  <input type="url" name="evtLink" id="evtLink-input"> //watch for errors because type url
+    <input type="url" name="evtLink" id="evtLink-input"> //watch for errors because type url
   
   <label for="location-input">Location:</label>
-  <input type="text" name="location" id="location-input">
+    <input type="text" name="location" id="location-input">
 
   <label for="time-input">Time:</label>
-  <input type="text" name="time" id="time-input">
- 
+    <input type="text" name="time" id="time-input">
   
   <label for="lodging-input">Lodging:</label>
-  <input type="text" name="lodging" id="lodging-input">
+    <input type="text" name="lodging" id="lodging-input">
   
   <label for="image-input">Event image (imgur link):</label>
-  <input type="url" name="image" id="image-input">
+    <input type="url" name="image" id="image-input">
 
-  <button type="submit">Next</button>
+  <a href="/profiles/<%= user.profile._id%>/events"</a>
+    <button type="submit" id="my-events-btn">Next</button>
+  </a>
 </form>
 
 <%- include('../partials/footer') %>
