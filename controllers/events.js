@@ -65,6 +65,7 @@ function show(req,res) {
   .then(event => {
     res.render('events/show', {
       title: 'Special Event',
+      event: event
     })
   })
   .catch(err => {
