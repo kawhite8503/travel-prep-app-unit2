@@ -20,9 +20,9 @@
   <tbody class="items-body">
   <% event.packItems.forEach(packItem => { %> 
     <div class="list-item">
-      <td class="item">Item:  <%= packItem.name %></td>
-      <td class="item">Person's Name:  <%= packItem.whoFor %></td>
-      <td class="item">Created:  <%= packItem.createdAt.toLocaleDateString() %></td>
+      <td class="item"><%= packItem.name %> - </td>
+      <td class="item"><%= packItem.whoFor %> - </td>
+      <td class="item"><%= packItem.createdAt.toLocaleDateString() %></td>
       <td class="item">
         <form action="/events/<%= event._id %>/packItems/<%= packItem._id %>?_method=DELETE" method="POST">
           <button type="submit">X</button></td>
