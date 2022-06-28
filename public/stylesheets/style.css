@@ -166,3 +166,49 @@ button {
   justify-content: center;
   align-items: center;
 }
+
+.items-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.item {
+  margin: 0 30px;
+  font-style: italic;
+}
+
+#item-table-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.items-display {
+  display: flex;
+  flex-direction: column;
+}
+
+td {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
+}
+
+form {
+  display: inline;
+}
+
+.list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.opt-act-icon {
+  border: solid 4px #ffb703;
+  border-radius: 50px;
+  padding: 30px
+}

@@ -5,9 +5,11 @@ const router = Router()
 
 router.get('/new', eventsCtrl.new)
 
-router.post('/', eventsCtrl.create)
-
 router.get('/:id/items', eventsCtrl.newItem)
+
+router.post('/', eventsCtrl.create)
+router.post('/:id/items', eventsCtrl.createItem)
+
 
 export {
   router

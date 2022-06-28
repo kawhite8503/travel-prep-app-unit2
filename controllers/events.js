@@ -43,9 +43,26 @@ function newItem(req,res) {
   }) 
 }
 
+function createItem(req,res) {
+    Event.findById(req.params.id)
+    .then(event => {
+      event.packItems.push(req.body)
+      event.save()
+      .then(() => {
+        console.log(event.packItems)
+        res.redirect(`/events/${event._id}/items`)
+      })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  }) 
+}
+
 
 export {
   newEvent as new,
   create,
   newItem,
+  createItem,
 }

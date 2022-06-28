@@ -1,0 +1,46 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<div id="event-detail-container">
+  <div id="b4u-go">
+    <h3>Before you go!</h3>
+    <h4>Have you made arrangements for...</h4>
+    <ul>
+      <li>...the pets?</li>
+      <li>...the mail?</li>
+      <li>...the trash?</li>
+    </ul>
+  </div>
+  <div id="event-main-details">
+    <h1><%= event.name %> </h1>
+    <h2><%= event.date %> </h2>
+    <ul>
+      <li><%= event.evtLink %></li>
+      <li><%= event.location %></li>
+      <% if(event.time) { %> 
+      <li><%= event.time %></li>
+      <% } %> 
+      <li><%= event.lodging %></li>
+    </ul>
+    <div id="evtdet-edit-delete">
+      <a href="">Edit Event Details</a>
+      <a href="">Delete Event</a>
+    </div>
+    <a href=""><button>Packing List</button></a>
+
+  </div>
+  <div>
+    <img src="placeholder" alt="luggage">
+  </div>
+</div>
+<div class="optional-activities">
+<h4 class="opt-act-icon">Optional Activity</h4>
+<h4 class="opt-act-icon">Optional Activity</h4>
+<h4 class="opt-act-icon">Optional Activity</h4>
+</div>
+
+
+
+
+
+<%- include('../partials/footer') %>

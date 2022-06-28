@@ -12,9 +12,25 @@
     <input type="text" name="whoFor" class="form-item" id="whoFor-input"  autocomplete="off">
   
     <button type="submit" id="add-to-list-btn">Add to List</button>
-  </form>
-  
+  </form>  
 </div>
+<br>
+
+
+  <tbody class="items-body">
+  <% event.packItems.forEach(packItem => { %> 
+    <div class="list-item">
+      <td class="item">Item:  <%= packItem.name %></td>
+      <td class="item">Person's Name:  <%= packItem.whoFor %></td>
+      <td class="item">Created:  <%= packItem.createdAt.toLocaleDateString() %></td>
+      <td class="item">
+        <form action="/events/<%= event._id %>/packItems/<%= packItem._id %>?_method=DELETE" method="POST">
+          <button type="submit">X</button></td>
+        </form>
+      </div>
+  <% }) %> 
+  </tbody>
+
 <a href=""><button type="submit" id="finalize-event-btn">Finalize Event</button> </a>
 
 <%- include('../../partials/footer') %>
