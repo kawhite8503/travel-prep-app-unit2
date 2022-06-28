@@ -143,6 +143,19 @@ button {
   justify-content: center;
   margin: 30px 0 0 0;
 }
+
+#add-items-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#finalize-event-btn {
+  display: block;
+  margin: 100px auto 0;
+  text-decoration: none;
+}
+
 .form-item {
   margin: 2px 0 10px 0;
 }

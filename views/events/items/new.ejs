@@ -1,8 +1,7 @@
 <%- include('../../partials/html-head') %>
 <%- include('../../partials/nav') %>
 <div class="center">
-<h2>Items to pack for <%= event.name %> </h2>
-<h3>Now, add the items you'll need to pack!</h3>
+<h2>Now, add the items you'll need to pack for <%= event.name %>!</h2>
 </div>
 <div id="add-items-form">
 <form id="new-item-form" action="/events/<%= event._id %>/items" method="POST">
@@ -14,8 +13,8 @@
   
     <button type="submit" id="add-to-list-btn">Add to List</button>
   </form>
-  <a href=""><button type="submit" id="finalize-event-btn">Finalize Event</button> </a>
   
 </div>
+<a href=""><button type="submit" id="finalize-event-btn">Finalize Event</button> </a>
 
 <%- include('../../partials/footer') %>
