@@ -60,9 +60,24 @@ function createItem(req,res) {
 }
 
 
+function show(req,res) {
+  Event.findById(req.params.id)
+  .then(event => {
+    res.render('events/show', {
+      title: 'Special Event',
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  }) 
+}
+
+
 export {
   newEvent as new,
   create,
   newItem,
   createItem,
+  show,
 }
