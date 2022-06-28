@@ -1,0 +1,28 @@
+<%- include('../../partials/html-head') %>
+<%- include('../../partials/nav') %>
+
+
+<h1>Packing List</h1>
+
+
+<% event.packItems.forEach(packItem => { %>
+  <div class="pack-list-column">
+    <h2><%= event.packItems.whoFor %></h2>
+    <div>
+      <h3>Item</h3>
+      <h3>Packed?</h3>
+    </div>
+    <div>
+      <ul>
+      <li><%= event.packItems.name %></li>  
+      </ul>
+    </div>
+  </div>
+<% }) %> 
+
+<a href="/events/<%= event._id %>/items"><button>Add More Items</button></a>
+<a href="/events/<%= event._id %>"><button>Back to Event Page</button></a>
+
+
+
+<%- include('../../partials/footer') %>

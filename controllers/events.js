@@ -74,6 +74,21 @@ function show(req,res) {
   }) 
 }
 
+function showItems(req,res) {
+  Event.findById(req.params.id)
+  .then(event => {
+    console.log(event)
+    res.render('events/items/show', {
+      title: 'Packing List',
+      event: event,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  }) 
+}
+
 
 export {
   newEvent as new,
@@ -81,4 +96,5 @@ export {
   newItem,
   createItem,
   show,
+  showItems,
 }
