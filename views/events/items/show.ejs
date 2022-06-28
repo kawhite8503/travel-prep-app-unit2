@@ -2,27 +2,33 @@
 <%- include('../../partials/nav') %>
 
 
-<h1>Packing List</h1>
+<h1 id="packingListTitle">Packing List</h1>
+<div class="packList-body">
+  <% event.packItems.forEach(packItem => { %>
+    <div id="columns-forEach-whoFor">
+      <h2 id="column-name"><%= packItem.whoFor %></h2>
+    <div id="item-and-packed">
+      <div id="item-column">
+        <h3 class="list-heading-item">Item</h3>
+        <ul>
+          <li id="itemlist"><%= packItem.name %></li>  
+        </ul>
+      </div>
+      <div id="packed-column">
+        <h3 class="list-heading-item">Packed?</h3>
+        <ul id="checkbox">
+          <input type="checkbox">
+        </ul>
+      </div>
 
-<div id="columns-forEach-whoFor">
-<% event.packItems.forEach(packItem => { %>
-  <div class="pack-list-column">
-    <h2><%= event.packItems.whoFor %></h2>
-    <div class="list-heading">
-      <h3 class="list-heading-item">Item</h3>
-      <h3 class="list-heading-item">Packed?</h3>
     </div>
-    <div>
-      <ul>
-      <li><%= event.packItems.name %></li>  
-      </ul>
     </div>
-  </div>
-<% }) %> 
+    <% }) %> 
 </div>
+<div id="footer-buttons">
 <a href="/events/<%= event._id %>/items"><button>Add More Items</button></a>
 <a href="/events/<%= event._id %>"><button>Back to Event Page</button></a>
-
+</div>
 
 
 <%- include('../../partials/footer') %>

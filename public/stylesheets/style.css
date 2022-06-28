@@ -235,7 +235,7 @@ form {
   margin: 0 50px 0 50px;
 }
 
-.list-heading {
+.item-column {
   display: flex;
   flex-direction: row;
   margin: 0 10px;
@@ -245,14 +245,51 @@ form {
   margin: 0 20px;
 }
 
+.packList-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#packingListTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #columns-forEach-whoFor {
+  border: solid 3px #fb8500;
+  border-radius: 20px;
+  margin: 20px;
+  max-width: 300px;
+  padding: 10px;
+}
+
+#item-and-packed {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-
 }
-.pack-list-column {
-  max-width: 300px;
-  margin: 20px;
-  border: solid 3px #fb8500;
+
+#item-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#packed-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#column-name {
+  display: flex;
+  justify-content: center;
+}
+
+#footer-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
