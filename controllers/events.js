@@ -1,4 +1,5 @@
 import { Event } from '../models/event.js'
+import { Profile } from '../models/profile.js'
 
 function newEvent(req,res) {
   res.render('events/new', {
@@ -14,7 +15,14 @@ function create(req,res) {
   Event.create(req.body)
   .then(event => {
     console.log(event)
-    res.redirect(`events/${event._id}/items/new`)
+    Profile.findById(req.user.profile._id)
+    .then(profile => {
+      profile.events.push(event)
+      profile.save()
+      .then(profile => {
+        res.redirect(`/events/${event._id}/items`)
+      })
+    })
   })
   .catch(err => {
     console.log(err)

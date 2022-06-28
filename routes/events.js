@@ -7,7 +7,7 @@ router.get('/new', eventsCtrl.new)
 
 router.post('/', eventsCtrl.create)
 
-router.get('/:id/items/new', eventsCtrl.newItem)
+router.get('/:id/items', eventsCtrl.newItem)
 
 export {
   router

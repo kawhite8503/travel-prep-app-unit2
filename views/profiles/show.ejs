@@ -6,6 +6,31 @@
 
 <a href="/events/new"><button type="submit">Add an Event!</button></a>
 
+
+
+<div id="eventsContainer">
+  <% profile.events.forEach(event => { %>
+    <a class="eventCard" href="/events/<%= event._id %>">
+      <div class="card">
+        <h1>HELLOOOOOOO</h1>
+        <div class="card-body">
+          <h1 class="card-title"><%= event.name %></h1>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 </main>
 
 <%- include('../partials/footer') %>
