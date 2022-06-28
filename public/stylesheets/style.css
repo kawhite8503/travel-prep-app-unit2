@@ -120,7 +120,6 @@ padding: 20px 0 0 0;
 
 li {
   display: flex;
-
 }
 
 .profileCard {
@@ -234,4 +233,26 @@ form {
 
 .opt-act-icon {
   margin: 0 50px 0 50px;
+}
+
+.list-heading {
+  display: flex;
+  flex-direction: row;
+  margin: 0 10px;
+}
+
+.list-heading-item {
+  margin: 0 20px;
+}
+
+#columns-forEach-whoFor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.pack-list-column {
+  max-width: 300px;
+  margin: 20px;
+  border: solid 3px #fb8500;
 }
