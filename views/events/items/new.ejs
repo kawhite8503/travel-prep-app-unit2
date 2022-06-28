@@ -20,8 +20,8 @@
   <tbody class="items-body">
   <% event.packItems.forEach(packItem => { %> 
     <div class="list-item">
-      <td class="item"><%= packItem.name %> - </td>
-      <td class="item"><%= packItem.whoFor %> - </td>
+      <td class="item"><%= packItem.name %>  |  </td>
+      <td class="item"><%= packItem.whoFor %>  |  </td>
       <td class="item"><%= packItem.createdAt.toLocaleDateString() %></td>
       <td class="item">
         <form action="/events/<%= event._id %>/packItems/<%= packItem._id %>?_method=DELETE" method="POST">
@@ -31,6 +31,6 @@
   <% }) %> 
   </tbody>
 
-<a href="/events/<%= event._id %> "><button type="submit" id="finalize-event-btn">Finalize Event</button> </a>
+<a href="/events/<%= event._id %>"><button type="submit" id="finalize-event-btn">Finalize Event</button> </a>
 
 <%- include('../../partials/footer') %>

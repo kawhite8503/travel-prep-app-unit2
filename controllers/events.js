@@ -89,6 +89,21 @@ function showItems(req,res) {
   }) 
 }
 
+function deleteItem(req,res) {
+  Event.findById(req.params.eventId)
+  .then(event => {
+    event.packItems.remove(req.params.packItemId)
+    event.save()
+    .then(() => {
+      res.redirect(`/events/${event._id}/items`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  }) 
+}
+
 
 export {
   newEvent as new,
@@ -97,4 +112,5 @@ export {
   createItem,
   show,
   showItems,
+  deleteItem,
 }

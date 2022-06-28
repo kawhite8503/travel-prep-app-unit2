@@ -12,9 +12,9 @@
   <% profile.events.forEach(event => { %>
     <a class="eventCard" href="/events/<%= event._id %>">
       <div class="card">
-        <h1>Event Name:</h1>
         <div class="card-body">
           <h1 class="card-title"><%= event.name %></h1>
+          <img src="<%= event.image%>" alt="<%= event.name %>">
         </div>
       </div>
     </div>
