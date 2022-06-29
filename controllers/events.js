@@ -59,13 +59,24 @@ function createItem(req,res) {
   }) 
 }
 
+const groupByProperty = (array, key) => {
+  const uniqueProps = [...new Set(array.map(el => el[key]))]
+  console.log('UNIQUE OWNERS', uniqueProps)
+  const sortedObj = uniqueProps.reduce((acc, prop) => {
+    acc[prop] = array.filter((obj) => obj[key] === prop)
+    return acc
+  }, {})
+  console.log('SORTED OBJECT', sortedObj)
+  return Object.values(sortedObj).map((obj) => obj)
+}
+
 
 function show(req,res) {
   Event.findById(req.params.id)
   .then(event => {
     res.render('events/show', {
       title: 'Special Event',
-      event: event
+      event: event,
     })
   })
   .catch(err => {
@@ -77,10 +88,13 @@ function show(req,res) {
 function showItems(req,res) {
   Event.findById(req.params.id)
   .then(event => {
+    const sortedItems = groupByProperty(event.packItems, 'whoFor')
+    console.log('SORTED ITEMS',sortedItems)
     console.log(event)
     res.render('events/items/show', {
       title: 'Packing List',
       event: event,
+      sortedItems      
     })
   })
   .catch(err => {

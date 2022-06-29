@@ -4,44 +4,28 @@
 
 
 
-<% const whoForArray = event.packItems.sort((a,b) => { %>
-  <% a.whoFor - b.whoFor %>
-<% }) %> 
-
-<p><%= whoForArray %> </p>
-
-
-
-<% packItems.forEach((packItem, index) => { %>
-  <% if(event.packItems[index] === event.packItems.name) { %>
-  <h5><%= event.packitems %></h5>
-  <% } %> 
-<% }) %>
-
-
 
 
 <h1 id="packingListTitle">Packing List</h1>
 <div class="packList-body">
-  <% event.packItems.forEach(packItem => { %>
-    <div id="columns-forEach-whoFor">
-      <h2 id="column-name"><%= packItem.whoFor %></h2>
-    <div id="item-and-packed">
-      <div id="item-column">
-        <h3 class="list-heading-item">Item</h3>
-        <ul>
-          <li id="itemlist"><%= packItem.name %></li>  
-        </ul>
-      </div>
-      <div id="packed-column">
-        <h3 class="list-heading-item">Packed?</h3>
-        <ul id="checkbox">
-          <input type="checkbox">
-        </ul>
-      </div>
-    </div>
-    </div>
-    <% }) %> 
+  <% sortedItems.forEach(list => { %>
+    <ul>
+      <h3> <%= list[0].whoFor %> </h3>
+      <% list.forEach(item => { %>
+        <li>
+          <%= item.name %>
+          <form action="">
+            <input type="checkbox" <%= item.isPacked? 'checked' : '' %> >
+          </form>
+        </li>
+      <% }) %>
+    </ul>
+  <% }) %>
+
+
+
+
+
 </div>
 <div id="footer-buttons">
 
