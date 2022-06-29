@@ -2,6 +2,25 @@
 <%- include('../../partials/nav') %>
 
 
+
+
+<% const whoForArray = event.packItems.sort((a,b) => { %>
+  <% a.whoFor - b.whoFor %>
+<% }) %> 
+
+<p><%= whoForArray %> </p>
+
+
+
+<% packItems.forEach((packItem, index) => { %>
+  <% if(event.packItems[index] === event.packItems.name) { %>
+  <h5><%= event.packitems %></h5>
+  <% } %> 
+<% }) %>
+
+
+
+
 <h1 id="packingListTitle">Packing List</h1>
 <div class="packList-body">
   <% event.packItems.forEach(packItem => { %>
@@ -20,14 +39,13 @@
           <input type="checkbox">
         </ul>
       </div>
-
     </div>
     </div>
     <% }) %> 
 </div>
 <div id="footer-buttons">
-  
-<a action="href="/events/<%= event._id %>/items"><button>Add More Items</button></a>
+
+<a href="/events/<%= event._id %>/items"><button>Add More Items</button></a>
 <a href="/events/<%= event._id %>"><button>Back to Event Page</button></a>
 </div>
 

@@ -7,8 +7,11 @@ router.get('/new', eventsCtrl.new)
 router.get('/:id', eventsCtrl.show)
 router.get('/:id/items', eventsCtrl.newItem)
 router.get('/:id/items/all', eventsCtrl.showItems)
+router.get('/:id/edit', eventsCtrl.edit)
 
 router.delete('/:eventId/packItems/:packItemId', eventsCtrl.deleteItem)
+
+router.put('/:id', eventsCtrl.update)
 
 router.post('/', eventsCtrl.create)
 router.post('/:id/items', eventsCtrl.createItem)

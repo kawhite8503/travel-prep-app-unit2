@@ -104,6 +104,32 @@ function deleteItem(req,res) {
   }) 
 }
 
+function edit(req,res) {
+  Event.findById(req.params.id)
+  .then(event => {
+    res.render('events/edit', {
+      title: 'Edit Event'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+function update(req,res) {
+  Event.findByIdAndUpdate(req.params.id, req.body, {new:true})
+  .then(event => {
+    res.redirect(`/events/${event._id}`, {
+      event: event
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 
 export {
   newEvent as new,
@@ -113,4 +139,6 @@ export {
   show,
   showItems,
   deleteItem,
+  update,
+  edit,
 }
