@@ -1,7 +1,8 @@
 <%- include('../../partials/html-head') %>
 <%- include('../../partials/nav') %>
 <div class="center">
-<h2>Now, add the items you'll need to pack for <%= event.name %>!</h2>
+<h2 class="mainTitle">Add the items you'll need</h2>
+<h2 class="subtitle">to pack for <%= event.name %>! </h2>
 </div>
 <div id="add-items-form">
 <form id="new-item-form" action="/events/<%= event._id %>/items" method="POST">
@@ -16,13 +17,6 @@
 </div>
 <br>
 
-event.packItems.whoFor.forEach(whoFor => {
-  <ul>
-    <li></li>
-  </ul>
-})
-
-
   <tbody class="items-body">
   <% event.packItems.forEach(packItem => { %> 
     <div class="list-item">
@@ -31,7 +25,7 @@ event.packItems.whoFor.forEach(whoFor => {
       <td class="item"><%= packItem.createdAt.toLocaleDateString() %></td>
       <td class="item">
         <form action="/events/<%= event._id %>/packItems/<%= packItem._id %>?_method=DELETE" method="POST">
-          <button type="submit">X</button></td>
+          <button id="deleteX" type="submit">X</button></td>
         </form>
       </div>
   <% }) %> 

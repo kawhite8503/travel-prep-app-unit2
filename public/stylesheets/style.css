@@ -204,6 +204,8 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 14px;
+  font-style: italic;
 }
 
 .opt-act-icon {
@@ -335,4 +337,17 @@ form {
   align-items: center;
   font-size: 12px;
   margin: 0;
+}
+
+.mainTitle {
+  margin: 30px 0 10px 0;
+}
+
+.subtitle {
+  margin: 0 0 30px 0;
+}
+
+#deleteX {
+  font-size: 12px;
+  margin: 2px 10px;
 }

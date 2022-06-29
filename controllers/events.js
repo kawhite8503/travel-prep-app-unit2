@@ -3,8 +3,8 @@ import { Profile } from '../models/profile.js'
 
 function newEvent(req,res) {
   res.render('events/new', {
-    title: "Add Event Details"
-  })
+    title: "Add Event Details",
+    })
   .catch(err => {
     console.log(err)
     res.redirect('/')
@@ -35,7 +35,8 @@ function newItem(req,res) {
   .then(event => {
     res.render('events/items/new', { 
       title: 'Add Items',
-      event })
+      event 
+    })
   })
   .catch(err => {
     console.log(err)
@@ -122,7 +123,8 @@ function edit(req,res) {
   Event.findById(req.params.id)
   .then(event => {
     res.render('events/edit', {
-      title: 'Edit Event'
+      title: 'Edit Event',
+      event
     })
   })
   .catch(err => {
