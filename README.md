@@ -6,10 +6,10 @@
 
 *"For every minute spent organizing, an hour is earned." -Benjamin Franklin*  
 
- ## Launch the application here
+## Launch the application here
 
-## Technologies used :floppy_disk: 
----
+## Technologies used :floppy_disk:
+
 CSS  
 JavaScript  
 HTML  
@@ -17,23 +17,23 @@ git
 MongoDB  
 Google OAuth  
 
-## Credits  
----
+## Credits
+
 Good to Go! uses JoyPixels 6.0 Cat With Wry Smile as favicon. Found at: Joypixels.  
 
-## Currently Working On :exclamation:  
----
+## Currently Working On :exclamation:
+
 - [ ] Adding update feature mark items packed/not packed  
 
-## Ice Box Goals 
----
-- [ ] Add Option to Upload Personal Photo to Event :camera:
+## Ice Box Goals
 
-- [ ] Add Optional Activities Schema :circus_tent:  :ferris_wheel:  
+- [ ] Add Option to Upload Personal Photo to Event  :camera:
+
+- [ ] Add Optional Activities Schema  :circus_tent:   :ferris_wheel:  
       - Add activities in the area you would like to do
-        - Include details: link to website, estimated cost, estimated time needed,    comments section.
+        - Include details: link to website, estimated cost, estimated time needed,    comments section.  
       - Add option to edit/delete Optional Activities
 
-- [ ] Add Lodging information Schema :hotel:  
-      - Add lodging details: confirmation number, lodging website, lodging address, lodging phone number, rate, cancellation policy,
+- [ ] Add Lodging information Schema  :hotel:  
+      - Add lodging details: confirmation number, lodging website, lodging address, lodging phone number, rate, cancellation policy.  
       - Add option to edit/delete Lodging
