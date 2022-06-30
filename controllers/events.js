@@ -12,12 +12,13 @@ function newEvent(req,res) {
 }
 
 function create(req,res) {
+  req.body.owner = req.user.profile._id
   Event.create(req.body)
   .then(event => {
     console.log(event)
     Profile.findById(req.user.profile._id)
     .then(profile => {
-      profile.events.push(event)
+      profile.events.push(event._id)
       profile.save()
       .then(profile => {
         res.redirect(`/events/${event._id}/items`)
@@ -107,11 +108,13 @@ function showItems(req,res) {
 function deleteItem(req,res) {
   Event.findById(req.params.eventId)
   .then(event => {
-    event.packItems.remove(req.params.packItemId)
-    event.save()
-    .then(() => {
-      res.redirect(`/events/${event._id}/items`)
-    })
+    if (event.owner.equals(req.user.profile._id)){
+      event.packItems.remove(req.params.packItemId)
+      event.save()
+      .then(() => {
+        res.redirect(`/events/${event._id}/items`)
+      })
+    }
   })
   .catch(err => {
     console.log(err)
@@ -134,11 +137,14 @@ function edit(req,res) {
 }
 
 function update(req,res) {
-  Event.findByIdAndUpdate(req.params.id, req.body, {new:true})
+  Event.findById(req.params.id)
   .then(event => {
-    res.redirect(`/events/${event._id}`, {
-      event: event
-    })
+    if(event.owner.equals(req.user.profile._id)) {
+      event.updateOne(req.body, {new: true})
+      .then(updatedEvent => {
+        res.redirect(`/events/${event._id}`)
+      })
+    }
   })
   .catch(err => {
     console.log(err)
@@ -146,6 +152,23 @@ function update(req,res) {
   })
 }
 
+function deleteEvent(req,res) {
+  console.log('DELETE HIT')
+  Event.findById(req.params.id)
+  .then(event => {
+    console.log('EVENT HERE', event)
+    if (event.owner.equals(req.user.profile._id)) {
+      event.delete()
+      .then(() => {
+        res.redirect(`/profiles/${req.user.profile._id}`)
+      })
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
 
 export {
   newEvent as new,
@@ -157,4 +180,5 @@ export {
   deleteItem,
   update,
   edit,
+  deleteEvent,
 }

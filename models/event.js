@@ -19,6 +19,7 @@ const eventSchema = new Schema({
   lodging: String,
   packItems: [itemsSchema],
   image: String,
+  owner: {type: Schema.Types.ObjectId, ref: 'Profile'}
 }, {
   timestamps: true
 })

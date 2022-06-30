@@ -19,13 +19,14 @@
       <li><%= event.time %></li>
       <% } %> 
       <li><%= event.lodging %></li>
-    </ul>
+    </ul> 
     <div id="evtdet-edit-delete">
       <a href="/events/<%= event._id %>/edit">Edit Event Details</a>
-      <a href="">Delete Event</a>
+      <form action="/events/<%= event._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Event</button>
+      </form>
     </div>
     <a href="/events/<%= event._id %>/items/all"><button>Packing List</button></a>
-
   </div>
   <div id="column3">
     <img id="luggage" src="https://i.imgur.com/GKcTobP.jpg" alt="luggage">
