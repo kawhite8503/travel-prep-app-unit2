@@ -14,6 +14,7 @@ router.delete('/:id', isLoggedIn, eventsCtrl.deleteEvent)
 router.delete('/:eventId/packItems/:packItemId', isLoggedIn, eventsCtrl.deleteItem)
 
 router.put('/:id', isLoggedIn, eventsCtrl.update)
+// router.put('/:id/items/:id', isLoggedIn, eventsCtrl.updateItems)
 
 router.post('/', isLoggedIn, eventsCtrl.create)
 router.post('/:id/items', isLoggedIn, eventsCtrl.createItem)

@@ -96,7 +96,7 @@ function showItems(req,res) {
     res.render('events/items/show', {
       title: 'Packing List',
       event: event,
-      sortedItems      
+      sortedItems,
     })
   })
   .catch(err => {
@@ -170,6 +170,25 @@ function deleteEvent(req,res) {
   })
 }
 
+// function updateItems(req,res) {
+//   Event.findById(req.params.id)
+//   .then(event => {
+//     if(event.owner.equals(req.user.profile._id)) {
+//       event.packItems.updateOne(req.body, {new: true})
+//       event.save()
+//       .then(updatedEvent => {
+//         res.redirect(`/events/${event._id}/items/all`)
+//       })
+//     }
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/')
+//   })
+// }
+
+
+
 export {
   newEvent as new,
   create,
@@ -181,4 +200,5 @@ export {
   update,
   edit,
   deleteEvent,
+  // updateItems,
 }
