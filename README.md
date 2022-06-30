@@ -6,7 +6,7 @@
 
 *"For every minute spent organizing, an hour is earned." -Benjamin Franklin*  
 
-## Launch the application here
+## Launch the application [here](https://travel-prep-app.herokuapp.com/)
 
 ## Technologies used :floppy_disk:
 
