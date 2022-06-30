@@ -5,7 +5,9 @@
   <section class="card-containers">
     <div id="profilesContainer">
       <% profiles.forEach(profile => { %>
+        <% if(profile.owner.equals(user?.profile._id)) { %> 
         <a class="profileCard" href="/profiles/<%= profile._id %>">
+        <% } %> 
           <div class="card">
             <% if (profile.avatar) { %>
               <img class="google-user-icon"

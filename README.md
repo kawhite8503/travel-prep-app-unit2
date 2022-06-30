@@ -6,7 +6,8 @@
 
 *"For every minute spent organizing, an hour is earned." -Benjamin Franklin*  
 
-## Launch the application [here](https://travel-prep-app.herokuapp.com/)
+## Launch the application [here](https://travel-prep-app.herokuapp.com/)  
+## View my Trello board [here](https://trello.com/b/wNaoO7iA/travel-prep-app)
 
 ## Technologies used :floppy_disk:
 
@@ -14,6 +15,7 @@ CSS
 JavaScript  
 HTML  
 git  
+Node.js  
 MongoDB  
 Google OAuth  
 

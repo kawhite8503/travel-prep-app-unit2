@@ -125,10 +125,12 @@ function deleteItem(req,res) {
 function edit(req,res) {
   Event.findById(req.params.id)
   .then(event => {
+    if(event.owner.equals(req.user.profile._id)) {
     res.render('events/edit', {
       title: 'Edit Event',
       event
     })
+  }
   })
   .catch(err => {
     console.log(err)
