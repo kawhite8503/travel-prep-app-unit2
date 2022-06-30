@@ -11,10 +11,10 @@ router.get('/:id/items/all', eventsCtrl.showItems)
 router.get('/:id/edit', isLoggedIn, eventsCtrl.edit)
 
 router.delete('/:id', isLoggedIn, eventsCtrl.deleteEvent)
-router.delete('/:eventId/packItems/:packItemId', isLoggedIn, eventsCtrl.deleteItem)
+router.delete('/:eventId/packItems/:packItemId', isLoggedIn, eventsCtrl.deleteItem) //UPDATEROUTE AND ACTION
 
 router.put('/:id', isLoggedIn, eventsCtrl.update)
-// router.put('/:id/items/:id', isLoggedIn, eventsCtrl.updateItems)
+router.put('/:eventId/items/:itemId', isLoggedIn, eventsCtrl.updateItems)
 
 router.post('/', isLoggedIn, eventsCtrl.create)
 router.post('/:id/items', isLoggedIn, eventsCtrl.createItem)

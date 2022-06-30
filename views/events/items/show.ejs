@@ -15,7 +15,10 @@
         <li>
           <%= item.name %>
           <form action="">
-            <input type="checkbox" <%= item.isPacked? 'checked' : '' %> >
+            <input onclick="return false" type="checkbox" <%= item.isPacked? 'checked' : '' %> >
+          </form>
+          <form action="/events/<%= event.id %>/items/<%= item._id %>?_method=PUT" method="POST">
+            <button type="submit">X</button>
           </form>
         </li>
       <% }) %>
@@ -23,9 +26,6 @@
   <% }) %>
 
 
-<!-- <form action="/events/<= event.id >/packItems/<= packItem._id %>?_method=PUT" method="POST">
-  <button type="submit">Update Packed Items</button>
-</form> -->
 
 
 </div>

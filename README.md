@@ -21,7 +21,7 @@ Google OAuth
 
 ## Credits
 
-Good to Go! uses JoyPixels 6.0 Cat With Wry Smile as favicon. Found at: Joypixels.  
+Clipboard favicon can be found [here](https://favicon.io/emoji-favicons/clipboard/)  
 
 ## Currently Working On :exclamation:
 

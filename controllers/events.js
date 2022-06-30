@@ -172,22 +172,28 @@ function deleteEvent(req,res) {
   })
 }
 
-// function updateItems(req,res) {
-//   Event.findById(req.params.id)
-//   .then(event => {
-//     if(event.owner.equals(req.user.profile._id)) {
-//       event.packItems.updateOne(req.body, {new: true})
-//       event.save()
-//       .then(updatedEvent => {
-//         res.redirect(`/events/${event._id}/items/all`)
-//       })
-//     }
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/')
-//   })
-// }
+function updateItems(req,res) {
+  req.body.packItems = !!req.body.packItems
+  for(let key in req.body){
+    if(req.body[key] === '') delete req.body[key]
+  }
+  Event.findById(req.params.eventId)
+  .then(event => {
+    if(event.owner.equals(req.user.profile._id)) {
+      const item = event.packItems.id({_id:req.params.itemId})
+      item.isPacked = !item.isPacked
+      
+      event.save()
+      .then(updatedEvent => {
+        res.redirect(`/events/${event._id}/items/all`)
+      })
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
 
 
 
@@ -202,5 +208,5 @@ export {
   update,
   edit,
   deleteEvent,
-  // updateItems,
+  updateItems,
 }
