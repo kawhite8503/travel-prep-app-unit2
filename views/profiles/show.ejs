@@ -3,8 +3,9 @@
 
 <main class="main">
 <p>My Upcoming Events:</p>
-
-<a href="/events/new"><button type="submit">Add an Event!</button></a>
+<% if (profile._id.equals(user.profile._id)) { %>
+  <a href="/events/new"><button type="submit">Add an Event!</button></a>
+<% } %>
 
 
 

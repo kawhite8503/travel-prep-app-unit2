@@ -13,7 +13,7 @@ function index(req,res) {
     res.render("profiles/index", { 
       profiles: profiles, 
       name: req.query.name,
-    title: "Profiles"
+      title: "Profiles",
   })
 })
   .catch(err => {
