@@ -74,7 +74,7 @@ section {
 }
 
 #nav-login-username {
-  color: #4b7478;
+  color: #023047;
 }
 
 #upcoming-trips {
@@ -223,9 +223,10 @@ form {
 .opt-act-icon {
   border: solid 1px #4b7478;
   border-radius: 8px;
-  padding: 30px;
+  padding: 25px 30px;
   background-color: white;
   margin: 0 50px 0 50px;
+  font-size: 10px;
 }
 
 #event-detail-container {
@@ -237,7 +238,8 @@ form {
 }
 
 #luggage {
-  max-width: 20vw;
+  width: 230px;
+  height: 250px;
   border-radius: 8px;
   border: solid 1px #4b7478;
 }
@@ -253,6 +255,7 @@ form {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 0 0 60px 0;
 }
 
 
@@ -351,11 +354,26 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 280px;
-  min-height: 292px;
+  width: 230px;
+  height: 250px;
   background-color: white;
   border-radius: 8px;
   border: solid 1px #4b7478
+}
+
+#arrangements {
+  margin: 0 0 25px 0;
+  font-size: 16px;
+}
+
+#arrangements2 {
+  margin: 10px 0 0 0;
+  font-size: 16px;
+}
+
+#inside-b4u-go > h3{
+  margin: 5px;
+  
 }
 
 .prepItem {
@@ -363,8 +381,9 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
+  font-size: 16px;
   margin: 0;
+  margin: 3px;
 }
 
 .mainTitle {
@@ -392,8 +411,9 @@ form {
 
 .navBtn {
     border-color: white;
-    color: #4b7478;
+    color: #023047;
     background-color: #dfe9ea;
+    border-radius: 3px;
 }
 
 .mainDetails {
@@ -403,4 +423,52 @@ form {
   align-items: center;
   padding: 10px;
   margin: 10px;
+}
+
+.mainDetails > li {
+  padding: 3px;
+}
+
+#deleteEvt {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  text-decoration: underline;
+  color: -webkit-link;
+}
+
+#packbtn {
+  border-color: white;
+  color: #023047;
+  background-color: #dfe9ea;
+  border-radius: 5px;
+  padding: 15px 20px;
+  margin: 15px 0 0 0;
+}
+
+#intro {
+  margin: 50px 0 10px 0;
+  padding: 70px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30px;
+}
+#intro2 {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#intro3 {
+  font-size: 16px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-style: italic;
 }
