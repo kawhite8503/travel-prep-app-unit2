@@ -2,7 +2,7 @@
 <%- include('../partials/nav') %>
 
 <main class="main">
-<p>My Upcoming Events:</p>
+<p>Upcoming Events:</p>
 <% if (profile._id.equals(user.profile._id)) { %>
   <a href="/events/new"><button type="submit">Add an Event!</button></a>
 <% } %>
@@ -11,7 +11,9 @@
 
 <div id="eventsContainer">
   <% profile.events.forEach(event => { %>
+    <% if(event.owner.equals(user.profile._id)) { %>
     <a class="eventCard" href="/events/<%= event._id %>">
+      <% } %>
       <div class="card">
         <div class="card-body">
           <h1 class="card-title"><%= event.name %></h1>

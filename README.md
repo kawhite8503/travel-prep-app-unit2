@@ -21,7 +21,7 @@ Google OAuth
 
 ## Credits
 
-Clipboard favicon can be found [here](https://favicon.io/emoji-favicons/clipboard/)  
+[Clipboard Favicon](https://favicon.io/emoji-favicons/clipboard/)  
 
 ## Currently Working On :exclamation:
 

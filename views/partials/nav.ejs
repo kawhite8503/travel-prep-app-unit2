@@ -5,7 +5,7 @@
 <body>
   <nav>
     <% if (user) { %>
-      <ul id="navbar">
+      <ul id="navbar-left">
       <% if (user?.profile.avatar) { %>
         <li class="form">
           <img id="google-user-icon-nav"
@@ -17,22 +17,24 @@
         <li>
           <p id="nav-login-username"><%=user.profile.name%></p>
         </li>
+      </ul>
+      <ul id="navbar-right">
         <li>
           <a href="/profiles/<%= user.profile._id%>"</a>
-            <button type="submit" id="my-events-btn">My Events</button>
+            <button type="submit" class="navBtn" id="my-events-btn">My Events</button>
           </a>
         </li>
         <li>
           <a href="/profiles">
-        <button type="submit" id="all-profiles-btn">All Profiles</button>
+        <button type="submit" class="navBtn" id="all-profiles-btn">All Profiles</button>
           </a>
         </li>
         <li>
         <a href="/auth/logout">
-          <button type="submit"  id="logout-btn">Logout</button>
+          <button type="submit" class="navBtn"  id="logout-btn">Logout</button>
         </a>
         </li>
-    </ul>
+      </ul>
     <% } else { %>
       <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">

@@ -9,16 +9,15 @@
 <h1 id="packingListTitle">Packing List</h1>
 <div class="packList-body">
   <% sortedItems.forEach(list => { %>
-    <ul>
-      <h3> <%= list[0].whoFor %> </h3>
+    <ul class="newList">
+      <h3 class="name"> <%= list[0].whoFor %> </h3>
       <% list.forEach(item => { %>
-        <li>
+        <li class="newItem">
           <%= item.name %>
-          <form action="">
-            <input onclick="return false" type="checkbox" <%= item.isPacked? 'checked' : '' %> >
-          </form>
           <form action="/events/<%= event.id %>/items/<%= item._id %>?_method=PUT" method="POST">
-            <button type="submit">X</button>
+            <button type="submit">
+              <input onclick="return false" type="checkbox" <%= item.isPacked? 'checked' : '' %> > Packed
+            </button>
           </form>
         </li>
       <% }) %>

@@ -61,18 +61,6 @@ function createItem(req,res) {
   }) 
 }
 
-const groupByProperty = (array, key) => {
-  const uniqueProps = [...new Set(array.map(el => el[key]))]
-  console.log('UNIQUE OWNERS', uniqueProps)
-  const sortedObj = uniqueProps.reduce((acc, prop) => {
-    acc[prop] = array.filter((obj) => obj[key] === prop)
-    return acc
-  }, {})
-  console.log('SORTED OBJECT', sortedObj)
-  return Object.values(sortedObj).map((obj) => obj)
-}
-
-
 function show(req,res) {
   Event.findById(req.params.id)
   .then(event => {
@@ -85,6 +73,17 @@ function show(req,res) {
     console.log(err)
     res.redirect('/')
   }) 
+}
+
+const groupByProperty = (array, key) => {
+  const uniqueProps = [...new Set(array.map(el => el[key]))]
+  console.log('UNIQUE OWNERS', uniqueProps)
+  const sortedObj = uniqueProps.reduce((acc, prop) => {
+    acc[prop] = array.filter((obj) => obj[key] === prop)
+    return acc
+  }, {})
+  console.log('SORTED OBJECT', sortedObj)
+  return Object.values(sortedObj).map((obj) => obj)
 }
 
 function showItems(req,res) {
@@ -182,7 +181,7 @@ function updateItems(req,res) {
     if(event.owner.equals(req.user.profile._id)) {
       const item = event.packItems.id({_id:req.params.itemId})
       item.isPacked = !item.isPacked
-      
+
       event.save()
       .then(updatedEvent => {
         res.redirect(`/events/${event._id}/items/all`)
