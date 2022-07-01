@@ -2,38 +2,24 @@
 <%- include('../partials/nav') %>
 
 <main class="main">
-<p>Upcoming Events:</p>
-<% if (profile._id.equals(user.profile._id)) { %>
-  <a href="/events/new"><button type="submit">Add an Event!</button></a>
-<% } %>
-
-
-
-<div id="eventsContainer">
-  <% profile.events.forEach(event => { %>
-    <% if(event.owner.equals(user.profile._id)) { %>
-    <a class="eventCard" href="/events/<%= event._id %>">
-      <% } %>
-      <div class="card">
-        <div class="card-body">
-          <h1 class="card-title"><%= event.name %></h1>
-          <img src="<%= event.image%>" alt="<%= event.name %>">
+  <% if (profile._id.equals(user.profile._id)) { %>
+    <a href="/events/new"><button id="addEvtBtn" type="submit">Add an Event!</button></a>
+    <% } %>
+  <p id="upcomEvts">Upcoming Events:</p>
+  <div id="eventsContainer">
+    <% profile.events.forEach(event => { %>
+      <% if(event.owner.equals(user.profile._id)) { %>
+      <a class="eventCard" href="/events/<%= event._id %>">
+        <% } %>
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title"><%= event.name %></h1>
+            <img src="<%= event.image%>" alt="<%= event.name %>">
+          </div>
         </div>
       </div>
-    </div>
-    <% }) %>
-</div>
-
-
-
-
-
-
-
-
-
-
-
+      <% }) %>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>

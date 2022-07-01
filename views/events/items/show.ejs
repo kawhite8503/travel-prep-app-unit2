@@ -1,11 +1,6 @@
 <%- include('../../partials/html-head') %>
 <%- include('../../partials/nav') %>
 
-
-
-
-
-
 <h1 id="packingListTitle">Packing List</h1>
 <div class="packList-body">
   <% sortedItems.forEach(list => { %>
@@ -15,24 +10,18 @@
         <li class="newItem">
           <%= item.name %>
           <form action="/events/<%= event.id %>/items/<%= item._id %>?_method=PUT" method="POST">
-            <button type="submit">
-              <input onclick="return false" type="checkbox" <%= item.isPacked? 'checked' : '' %> > Packed
+            <button id ="checkbtn" type="submit">
+              <input id="checkbox" onclick="return false" type="checkbox" <%= item.isPacked? 'checked' : '' %> > Packed
             </button>
           </form>
         </li>
       <% }) %>
     </ul>
   <% }) %>
-
-
-
-
 </div>
 <div id="footer-buttons">
-
-<a href="/events/<%= event._id %>/items"><button>Add More Items</button></a>
-<a href="/events/<%= event._id %>"><button>Back to Event Page</button></a>
+  <a href="/events/<%= event._id %>/items"><button class="itemftrbtn">Add More Items</button></a>
+  <a href="/events/<%= event._id %>"><button class="itemftrbtn">Back to Event Page</button></a>
 </div>
-
 
 <%- include('../../partials/footer') %>
