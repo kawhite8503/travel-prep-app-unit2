@@ -221,9 +221,11 @@ form {
 }
 
 .opt-act-icon {
-  border: solid 3px #ffb703;
-  border-radius: 50px;
-  padding: 30px
+  border: solid 1px #4b7478;
+  border-radius: 8px;
+  padding: 30px;
+  background-color: white;
+  margin: 0 50px 0 50px;
 }
 
 #event-detail-container {
@@ -231,12 +233,13 @@ form {
   grid-template-columns: 33% 33% 33%;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
+  min-height: 80vh;
 }
 
 #luggage {
   max-width: 20vw;
-  border-radius: 20px;
+  border-radius: 8px;
+  border: solid 1px #4b7478;
 }
 
 #column3 {
@@ -252,9 +255,6 @@ form {
   align-items: center;
 }
 
-.opt-act-icon {
-  margin: 0 50px 0 50px;
-}
 
 .item-column {
   display: flex;
@@ -324,6 +324,7 @@ form {
   background-color: white;
   padding: 20px 20px 50px 20px;
   border-radius: 8px;
+  border: solid 1px #4b7478;
   color
 }
 
@@ -341,9 +342,20 @@ form {
 
 #b4u-go {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inside-b4u-go {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-width: 280px;
+  min-height: 292px;
+  background-color: white;
+  border-radius: 8px;
+  border: solid 1px #4b7478
 }
 
 .prepItem {
