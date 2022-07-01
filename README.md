@@ -28,18 +28,11 @@ Google OAuth
 
 [Clipboard Favicon](https://favicon.io/emoji-favicons/clipboard/)  
 
--[Photo by Lukas Blazek on Unsplash](https://unsplash.com/s/photos/wood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+-[Photo by Lukas Blazek on Unsplash](https://unsplash.com/s/photos/wood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)   
 -[Photo by Bench Accounting on Unsplash](https://unsplash.com/s/photos/desk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
 -[Photo by Jefferson Sees on Unsplash](https://unsplash.com/s/photos/luggage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
 -[Photo by Wiser by the Mile on Unsplash](https://unsplash.com/s/photos/luggage?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
   
-
-  
-  
-
-## Currently Working On :exclamation:
-
-- [ ] Adding update feature mark items packed/not packed  
 
 ## Ice Box Goals
 
