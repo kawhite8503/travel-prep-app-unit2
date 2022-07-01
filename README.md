@@ -1,10 +1,15 @@
-<h1>Good to Go!</h1>
+<h1>Traveling made easy!</h1>
 
-<img src"../images/Screen Shot 2022-07-01 at 1.40.00 AM.png">
+![Login Page](public/images/IndexScreenshot.png)
 
-:airplane:  ***Good to Go!***  :car: is a traveling prep web application to help you prepare for your adventures! Each user has their own profile that they can add events to and add all of the details of the event (date range, location, etc.). Also included, a packing list feature that allows you to add multiple household members and track which items need packed and which have been packed! Leave the stress of vacation planning behind by keeping organized!  
+
+:airplane: :car: This travel prep web application is designed to help you prepare for your adventures! Each user has their own profile that they can add events to and add all of the details of the event (date range, location, etc.). Also included, a packing list feature that allows you to add multiple household members and track which items need packed and which have been packed! Leave the stress of vacation planning behind by keeping organized!  
+
+![Event Page](public/images/EventDetailScreenshot.png)
 
 *"For every minute spent organizing, an hour is earned." -Benjamin Franklin*  
+
+![Packing List Page](public/images/PackListScreenshot.png)  
 
 ## Launch the application [here](https://travel-prep-app.herokuapp.com/)  
 ## View my Trello board [here](https://trello.com/b/wNaoO7iA/travel-prep-app)
