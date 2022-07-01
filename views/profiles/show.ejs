@@ -5,7 +5,7 @@
   <% if (profile._id.equals(user.profile._id)) { %>
     <a href="/events/new"><button id="addEvtBtn" type="submit">Add an Event!</button></a>
     <% } %>
-  <p id="upcomEvts">Upcoming Events:</p>
+  <h3 id="upcomEvts">Upcoming Events:</h3>
   <div id="eventsContainer">
     <% profile.events.forEach(event => { %>
       <% if(event.owner.equals(user.profile._id)) { %>
@@ -14,7 +14,7 @@
         <div class="card">
           <div class="card-body">
             <h1 class="card-title"><%= event.name %></h1>
-            <img src="<%= event.image%>" alt="<%= event.name %>">
+            <img src="../images/wiser-by-the-mile-3o-X8WJOP5E-unsplash.jpg" alt="<%= event.name %>">
           </div>
         </div>
       </div>

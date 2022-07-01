@@ -6,7 +6,7 @@
 
 
 <div class="center">
-  <h1>Edit <%= event.name %> details </h1>
+  <h1 id="editTitle">Edit <%= event.name %> details </h1>
 </div>
   <div id="add-event-form">
   <form id="new-form" action="/events/<%= event._id %>?_method=PUT" method="POST">
@@ -27,11 +27,8 @@
     
     <label for="lodging-input">Lodging:</label>
       <input type="text" name="lodging" class="form-item" id="lodging-input" value="<%= event.lodging %>" autocomplete="off">
-    
-    <label for="image-input">Event image (imgur link):</label>
-      <input type="url" name="image" class="form-item" id="image-input" value="<%= event.image %>" autocomplete="off">
       
-      <button type="submit" id="my-events-btn">Update</button>
+      <button type="submit" id="my-events-btn2">Update</button>
   </form>
   </div>
 
