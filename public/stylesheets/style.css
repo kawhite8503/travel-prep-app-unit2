@@ -580,6 +580,7 @@ form {
   min-width: 250px;
   border-radius: 8px;
   background-image: url("../images/lukas-blazek-EWDvHNNfUmQ-unsplash.jpg");
+  background-size: cover;
 }
 
 #checkbtn {
