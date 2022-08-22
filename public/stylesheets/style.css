@@ -683,7 +683,7 @@ color: #023047;
   }
 }
 
-@media (min-width: 427px) {
+@media (max-width: 427px) {
   #logout-btn{
     height: 48px;
   }
