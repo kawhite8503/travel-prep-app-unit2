@@ -652,12 +652,17 @@ color: #023047;
   #inside-b4u-go #column3 {
     display: none;
   }
+  .main{
+    text-align: center;
+    margin: 0 15px;
+  }
   .body{
     background-position-x: center;
   }
   #intro{
     padding: 0;
     font-size: 26px;
+    margin: 50px 0 30px 0;
   }
   #intro2{
     font-size: 18px;
@@ -675,6 +680,18 @@ color: #023047;
     text-align: center;
     margin: 0 15px;
   }
-
+  #intro{
+    padding: 0;
+    font-size: 26px;
+  }
+  #intro2{
+    font-size: 18px;
+    margin: 0 25px;
+  }
+  #intro3{
+    padding: 10px;
+    margin: 50px;
+    border: solid 2px #d5cbd5;
+  }
 }
 
