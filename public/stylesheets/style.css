@@ -648,10 +648,33 @@ color: #023047;
   #event-detail-container {
     display: flex;
     flex-wrap: wrap;
-}}
-
-@media (min-width: 768px) {
+  }
   #inside-b4u-go #column3 {
     display: none;
-}}
+  }
+  .body{
+    background-position-x: center;
+  }
+  #intro{
+    padding: 0;
+    font-size: 26px;
+  }
+  #intro2{
+    font-size: 18px;
+    margin: 0 25px;
+  }
+  #intro3{
+    padding: 10px;
+    margin: 50px;
+    border: solid 2px #d5cbd5;
+  }
+}
+
+@media (min-width: 400px) {
+  .main{
+    text-align: center;
+    margin: 0 15px;
+  }
+
+}
 
