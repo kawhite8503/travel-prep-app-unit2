@@ -6,25 +6,33 @@
 </div>
 <div id="add-event-form">
 <form id="new-form" action="/events" method="POST">
-  <label for="name-input">Name of event:</label>
+  <div class="label-input">
+    <label for="name-input">Name of event:</label>
     <input type="text" name="name" class="form-item" id="name-input" autocomplete="off">
-  
-  <label for="date-input">Date range:</label>
+  </div>
+  <div class="label-input">
+    <label for="date-input">Date range:</label>
     <input type="text" name="date" class="form-item" id="date-input"  autocomplete="off">
-  
-  <label for="evtLink-input">Link to event:</label>
+  </div>
+  <div class="label-input">
+    <label for="evtLink-input">Link to event:</label>
     <input type="url" name="evtLink" class="form-item" id="evtLink-input"  autocomplete="off">
-  
-  <label for="location-input">Location:</label>
+  </div>
+  <div class="label-input">
+    <label for="location-input">Location:</label>
     <input type="text" name="location" class="form-item" id="location-input" autocomplete="off">
-
-  <label for="time-input">Time:</label>
+  </div>
+  <div class="label-input">
+    <label for="time-input">Time:</label>
     <input type="text" name="time" class="form-item" id="time-input" autocomplete="off">
-  
-  <label for="lodging-input">Lodging:</label>
+  </div>
+  <div class="label-input">
+    <label for="lodging-input">Lodging:</label>
     <input type="text" name="lodging" class="form-item" id="lodging-input" autocomplete="off">
-    
+  </div>
+  <div id="nxtBtnDiv">
     <button type="submit" id="nxtBtn">Next</button>
+  </div>
 </form>
 </div>
 
