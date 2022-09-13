@@ -8,29 +8,39 @@
 <div class="center">
   <h1 id="editTitle">Edit <%= event.name %> details </h1>
 </div>
-  <div id="add-event-form">
-  <form id="new-form" action="/events/<%= event._id %>?_method=PUT" method="POST">
-    <label for="name-input">Name of event:</label>
-      <input type="text" name="name" class="form-item" id="name-input" value="<%= event.name %>" autocomplete="off">
-    
-    <label for="date-input">Date range:</label>
-      <input type="text" name="date" class="form-item" id="date-input" value="<%= event.date %>" autocomplete="off">
-    
-    <label for="evtLink-input">Link to event:</label>
-      <input type="url" name="evtLink" class="form-item" id="evtLink-input" value="<%= event.evtLink %>"  autocomplete="off">
-    
-    <label for="location-input">Location:</label>
-      <input type="text" name="location" class="form-item" id="location-input" value="<%= event.location %>" autocomplete="off">
-  
-    <label for="time-input">Time:</label>
-      <input type="text" name="time" class="form-item" id="time-input" value="<%= event.time %>" autocomplete="off">
-    
-    <label for="lodging-input">Lodging:</label>
-      <input type="text" name="lodging" class="form-item" id="lodging-input" value="<%= event.lodging %>" autocomplete="off">
-      
-      <button type="submit" id="my-events-btn2">Update</button>
+<div id="formDiv">
+  <form id="new-form" action="/events/<%= event._id %>?_method=PUT" method="POST">  
+    <div id="add-event-form">
+      <div class="editDiv">
+        <label for="name-input">Name of event:</label>
+        <input type="text" name="name" class="form-item" id="name-input" value="<%= event.name %>"autocomplete="off">
+      </div>
+      <div class="editDiv">
+        <label for="date-input">Date range:</label>
+        <input type="text" name="date" class="form-item" id="date-input" value="<%= event.date %>"autocomplete="off">
+      </div>
+      <div class="editDiv">
+        <label for="evtLink-input">Link to event:</label>
+          <input type="url" name="evtLink" class="form-item" id="evtLink-input" value="<%= event.evtLink %>" autocomplete="off">
+      </div>
+      <div class="editDiv">
+        <label for="location-input">Location:</label>
+        <input type="text" name="location" class="form-item" id="location-input" value="<%= event.location %>"autocomplete="off">
+      </div>
+      <div class="editDiv">
+        <label for="time-input">Time:</label>
+        <input type="text" name="time" class="form-item" id="time-input" value="<%= event.time %>"autocomplete="off">
+      </div>
+      <div class="editDiv">
+        <label for="lodging-input">Lodging:</label>
+        <input type="text" name="lodging" class="form-item" id="lodging-input" value="<%= event.lodging %>"autocomplete="off">
+      </div>
+      <div id="updateBtnDiv">
+        <button type="submit" id="my-events-btn2">Update</button>
+      </div>
+    </div>
   </form>
-  </div>
+</div>
 
 
 <%- include('../partials/footer') %>

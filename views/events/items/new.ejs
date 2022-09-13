@@ -4,15 +4,21 @@
   <h2 class="mainTitle">Add the items you'll need</h2>
   <h2 class="subtitle">to pack for <%= event.name %>! </h2>
 </div>
-<div id="add-items-form">
-  <form id="new-item-form" action="/events/<%= event._id %>/items"method="POST">
-    <label for="item-input">Item:</label>
-      <input type="text" name="name" class="form-item" id="item-input"autocomplete="off">
-    <label for="whoFor-input">Person's name:</label>
-      <input type="text" name="whoFor" class="form-item"id="whoFor-input"  autocomplete="off">
+<form id="new-item-form" action="/events/<%= event._id %>/items"method="POST">
+  <div id="items-input">
+    <div id="add-items-form">
+      <div class="items-label-input">
+        <label for="item-input">Item:</label>
+        <input type="text" name="name" class="form-item" id="item-input"autocomplete="off">
+      </div>
+      <div class="items-label-input">
+        <label for="whoFor-input">Person's name:</label>
+        <input type="text" name="whoFor" class="form-item"id="whoFor-input"  autocomplete="off">
+      </div>
+  </div>
     <button type="submit" id="add-to-list-btn">Add to List</button>
-  </form>  
-</div>
+  </div>
+</form>  
 <br>
 <tbody class="items-body">
   <% event.packItems.forEach(packItem => { %> 

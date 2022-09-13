@@ -166,15 +166,24 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: white;
   padding: 40px;
   border-radius: 8px;
-  width: 50vw;
+  width: 85vw;
+  margin: 0;
+}
+#formDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #add-event-form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 0;
 }
 
@@ -183,14 +192,22 @@ button {
   justify-content: center;
   align-items: center;
   margin: 30px;
+  width: 80vw;
+}
+
+#items-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #finalize-event-btn {
   border-color: white;
   color: #023047;
   background-color: #dfe9ea;
-  border-radius: 3px;
-  margin: 50px 0 15px 0;
+  border-radius: 3px; 
+  margin: 100px 0 15px 0;
   border-radius: 5px;
   padding: 10px 15px;
 
@@ -205,7 +222,7 @@ button {
 
 
 .form-item {
-  margin: 2px 15px 14px 4px;
+  margin: 3px 20px 0 0;
   color: #023047;
 }
 
@@ -215,6 +232,7 @@ button {
   justify-content: center;
   align-items: center;
   color: #023047;
+  text-align: center;
 }
 
 .items-body {
@@ -387,18 +405,24 @@ form {
   border-radius: 8px;
   border: solid 1px #4b7478;
   color: #023047;
+  text-align: center;
 }
 
+.editDiv{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 400px;
+}
 
 #evtdet-edit-delete {
   margin: 20px 0;
   font-size: 16px;
-  color: #023047;
 }
 
 #evtdet-edit-delete > a {
   margin: 20px;
-  color: #223a2c;
+  color: #568c79;
 }
 
 #b4u-go {
@@ -421,16 +445,11 @@ form {
   color: #023047;
 }
 
-#arrangements {
-  margin: 0 0 25px 0;
-  font-size: 16px;
-  color: #023047;
-}
-
 #arrangements2 {
-  margin: 10px 0 0 0;
+  margin: 10px 0 25px 0;
   font-size: 16px;
   color: #023047;
+  text-align: center;
 }
 
 #inside-b4u-go > h3{
@@ -497,13 +516,14 @@ form {
 
 #deleteEvt {
   background: none;
-  color: rgb(152, 59, 59);
+  color: rgb(160 106 106);
   border: none;
   padding: 0;
   font: inherit;
   cursor: pointer;
   outline: inherit;
   text-decoration: underline;
+  margin-top: 8px;
 }
 
 #packbtn {
@@ -559,6 +579,7 @@ form {
   display: flex;
   flex-direction: column;
   padding: 3px;
+  width: 400px;
 }
 
 #nxtBtnDiv{
@@ -581,6 +602,7 @@ form {
   color: #023047;
   background-color: #dfe9ea;
   border-radius: 3px;
+  width: 150px;
 }
 
 .itemftrbtn {
@@ -597,8 +619,9 @@ form {
   min-height: 60vh;
   min-width: 250px;
   border-radius: 8px;
-  background-image: url("../images/lukas-blazek-EWDvHNNfUmQ-unsplash.jpg");
+  background-image: url("../images/lukas-blazek-EWDvHNNfUmQ-unsplash (1).jpg");
   background-size: cover;
+  margin: 15px;
 }
 
 #checkbtn {
@@ -643,8 +666,12 @@ form {
 }
 
 #my-events-btn2 {
-margin: 15px 45px 0 45px;
-color: #023047;
+  border-color: white;
+  color: #023047;
+  background-color: #dfe9ea;
+  border-radius: 3px;
+  padding: 5px 20px;
+  margin: 15px 0 0 0;
 }
 
 #editTitle {
@@ -660,8 +687,19 @@ color: #023047;
 #logoutATag {
   margin: 0 10px 0 0;
 }
-input{
-  height: max-content;
+
+.items-label-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25vw;
+}
+
+@media (max-width: 1300px){
+  #event-detail-container{
+    grid-template-columns: 20% 50% 20%;
+    justify-content: space-evenly;
+  }
 }
 
 @media (min-width: 1300px){
@@ -675,32 +713,77 @@ input{
     align-items: center;
     margin-top: 30px;
   }
+}
 
-.label-input{
-  display: flex;
-  flex-direction: row;
+@media (max-width: 950px){
+  #column3{
+    display: none;
+  }
+  #event-detail-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #prepItemDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  #event-main-details {
+    width: 75vw;
+  }
+  #inside-b4u-go{
+    width: 85vw;
+    height: 130px;
+  }
+  #arrangements2{
+    margin-bottom: 5px;
+  }
+  #b4u-go{
+    display: none;
+  }
+  .optional-activities{
+    flex-direction: column;
+  }
+  .opt-act-icon{
+    margin: 10px;
+  }
+}
+
+@media (min-width: 850px){
+  #new-form{
+    width: 750px;
+  }
+}
+
+@media (max-width: 850px){
+  #add-items-form {
+  flex-direction: column; 
   justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  height: 120px;
+  }
+  .items-label-input{
+    justify-content: space-between;
+    width: 60vw;
+  }
+  .form-item{
+    margin: 3px 0 0 0;
+  }
 }
-
-.label-input >input {
-  width: 400px;
-}
-}
-
-@media (min-width: 1400px){
-  .label-input >input {
-    width: 33vw;
-}}
 
 @media (max-width: 768px) {
   #event-detail-container {
     display: flex;
     flex-wrap: wrap;
   }
-  #inside-b4u-go #column3 {
+  #inside-b4u-go {
     display: none;
   }
   #nav-login-username{
+    display: none;
+  }
+  #column3 {
     display: none;
   }
   nav{
@@ -729,11 +812,29 @@ input{
     border: solid 2px #d5cbd5;
     background-color: whitesmoke;
   }
+  .items-label-input{
+    margin-bottom: 20px;
+  }
+  #add-items-form{
+    margin: 10px;
+  }
+  #add-to-list-btn{
+    margin-top: 20px;
+  }
 }
 
-@media (max-width: 427px) {
+@media (max-width: 600px) {
+  .label-input{
+    width: 70vw;    
+  }
+  .editDiv{
+    width: 70vw;
+  }
+}
+
+@media (max-width: 420px) {
   #logout-btn{
-    height: 48px;
+    height: 56px;
   }
 }
 
